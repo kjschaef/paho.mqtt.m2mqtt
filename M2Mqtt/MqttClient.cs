@@ -128,7 +128,7 @@ namespace uPLibrary.Networking.M2Mqtt
         private int brokerPort;
 
         // running status of threads
-        private bool isRunning;
+        public bool isRunning;
         // event for raising received message event
         private AutoResetEvent receiveEventWaitHandle;
 
@@ -174,7 +174,7 @@ namespace uPLibrary.Networking.M2Mqtt
         public event ConnectionClosedEventHandler ConnectionClosed;
         
         // channel to communicate over the network
-        private IMqttNetworkChannel channel;
+        public IMqttNetworkChannel channel;
 
         // inflight messages queue
         private Queue inflightQueue;
